@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>MadChipmunk03</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <icon>https://github.com/MadChipmunk03/UniversalMessengerLibrary2/blob/master/images/chat.png</icon>
+    <projectUrl>https://github.com/MadChipmunk03/UniversalMessengerLibrary2</projectUrl>
+    <description>$description$</description>
+    <releaseNotes>First release!</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>MadChipmunk03 UniversalMessengerLibrary</tags>
+  </metadata>
+</package>
