@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UniversalMessengerLibrary.Services
+namespace UniversalMessengerLibrary2.Services
 {
     internal interface IMessengerService<T, U>
     {

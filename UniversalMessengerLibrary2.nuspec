@@ -7,9 +7,9 @@
     <authors>MadChipmunk03</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
-    <icon>https://github.com/MadChipmunk03/UniversalMessengerLibrary2/blob/master/images/chat.png</icon>
+    <!-- <icon>images\chat.png</icon> -->
     <projectUrl>https://github.com/MadChipmunk03/UniversalMessengerLibrary2</projectUrl>
-    <description>$description$</description>
+    <description>A library made to easily send messages to multiple recipients using supported platforms</description>
     <releaseNotes>First release!</releaseNotes>
     <copyright>$copyright$</copyright>
     <tags>MadChipmunk03 UniversalMessengerLibrary</tags>

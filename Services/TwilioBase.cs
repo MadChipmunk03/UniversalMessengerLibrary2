@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 
-namespace UniversalMessengerLibrary.Services
+namespace UniversalMessengerLibrary2.Services
 {
-    internal abstract class TwilioBase : IMessengerService<string, string>
+    public abstract class TwilioBase : IMessengerService<string, string>
     {
         public string Sender { get; set; }
         public List<string> Recipients { get; set; } = new List<string>();
@@ -22,8 +22,7 @@ namespace UniversalMessengerLibrary.Services
             AccountSid = accountSid;
             AuthToken = authToken;
 
-            if (IsValid(senderPhoneNumber)) Sender = senderPhoneNumber;
-            else throw new Exception("Invalid phone number");
+            Sender = senderPhoneNumber;
         }
 
         public TwilioBase(string senderPhoneNumber)
@@ -31,13 +30,12 @@ namespace UniversalMessengerLibrary.Services
             AccountSid = Environment.GetEnvironmentVariable("TWILIO_ACCOUNT_SID");
             AuthToken = Environment.GetEnvironmentVariable("TWILIO_AUTH_TOKEN");
 
-            if (IsValid(senderPhoneNumber)) Sender = senderPhoneNumber;
-            else throw new Exception("Invalid phone number");
+            Sender = senderPhoneNumber;
         }
 
-        public bool IsValid(string recipient)
+        public virtual bool IsValid(string recipient)
         {
-            return Regex.IsMatch(recipient, @"^\+\d{3}(\d{3}){3}$");
+            return Regex.IsMatch(recipient, @"^\+?(\d| ){3,16}$");
         }
 
         public virtual void AddRecipient(string recipient)
