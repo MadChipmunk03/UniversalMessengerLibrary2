@@ -1,6 +1,8 @@
 # UniversalMessengerLibrary
 A library made to easily send messages to multiple recipients using supported platforms
 
+<a href="https://www.nuget.org/packages/UniversalMessengerLibrary2" target="_blank">[NuGet]</a>
+
 ## Supported platforms:
 - Twilio
 
