@@ -41,13 +41,14 @@ namespace UniversalMessengerLibrary2.Services
         public virtual void AddRecipient(string recipient)
         {
             if (!IsValid(recipient)) throw new Exception("Invalid phone number");
-            Recipients.Add(recipient);
         }
 
         public abstract void FillRecipients();
 
         public void SendMessages(string message)
         {
+            FillRecipients();
+
             TwilioClient.Init(AccountSid, AuthToken);
 
             foreach (string recipient in Recipients)
